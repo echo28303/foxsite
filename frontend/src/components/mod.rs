@@ -1,0 +1,9 @@
+pub mod about_page;
+pub mod community_page;
+pub mod features_page;
+pub mod footer;
+pub mod header;
+pub mod home_page;
+pub mod mining_page;
+pub mod navigation;
+pub mod wallet_page;

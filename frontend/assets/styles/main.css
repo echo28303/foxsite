@@ -1,0 +1,287 @@
+/* Base Styles - Mobile First */
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: #FFFFFF;
+    color: #333333;
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+}
+
+/* Typography */
+h1, h2, h3 {
+    color: #003366;
+    font-weight: 700;
+    margin-top: 0;
+}
+
+h1 {
+    font-size: 28px; /* Adjusted for mobile */
+}
+
+h2 {
+    font-size: 24px; /* Adjusted for mobile */
+}
+
+h3 {
+    font-size: 20px; /* Adjusted for mobile */
+}
+
+p {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 14px; /* Adjusted for mobile */
+    margin-bottom: 16px;
+}
+
+/* Links */
+a {
+    color: #003366;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+a:hover {
+    color: #00509E;
+}
+
+/* Buttons */
+.btn-primary {
+    background-color: #003366;
+    color: #FFFFFF;
+    padding: 10px 20px;
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    font-size: 14px; /* Adjusted for mobile */
+}
+
+.btn-primary:hover {
+    background-color: #00509E;
+}
+
+/* Layout Containers */
+.container {
+    padding: 16px; /* Adjusted for mobile */
+}
+
+/* Hero Section */
+.hero {
+    width: 100%;
+    padding: 80px 16px; /* Adjusted for mobile */
+    background-color: #003366; /* Set a solid color background */
+    color: #FFFFFF; /* Set text color to contrast with background */
+    text-align: center;
+}
+
+/* Hero Content */
+.hero-content h1 {
+    font-size: 32px; /* Adjusted for mobile */
+    margin-bottom: 16px;
+}
+
+.hero-content p {
+    font-size: 18px; /* Adjusted for mobile */
+    margin-bottom: 20px;
+}
+
+/* Cards */
+.card {
+    background-color: #FFFFFF;
+    border: 1px solid #C0C0C0;
+    border-radius: 8px;
+    padding: 16px; /* Adjusted for mobile */
+    margin-bottom: 16px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    transition: box-shadow 0.3s ease;
+}
+
+.card:hover {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.card-header {
+    font-size: 16px; /* Adjusted for mobile */
+    font-weight: 700;
+    margin-bottom: 8px;
+}
+
+.card-content {
+    font-size: 14px; /* Adjusted for mobile */
+}
+
+/* Callouts */
+.callout {
+    background-color: #E6F7FF;
+    border-left: 4px solid #003366;
+    padding: 16px; /* Adjusted for mobile */
+    margin-bottom: 16px;
+    color: #003366;
+    font-size: 16px; /* Adjusted for mobile */
+    border-radius: 4px;
+}
+
+/* Base Styles for Navigation */
+.navbar {
+    background-color: #003366;
+    color: #FFFFFF;
+    padding: 10px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.navbar-brand a {
+    color: #FFFFFF;
+    font-weight: 700;
+    font-size: 18px;
+    text-decoration: none;
+}
+
+.navbar-links {
+    display: none; /* Hide links by default */
+    flex-direction: column;
+    align-items: flex-start;
+    width: 100%;
+    padding-top: 20px;
+}
+
+.navbar-links.open {
+    display: flex; /* Show links when menu is open */
+}
+
+.navbar-links a {
+    color: #FFFFFF;
+    text-decoration: none;
+    padding: 10px 0;
+    width: 100%;
+    text-align: left;
+    font-size: 16px;
+}
+
+/* Burger Menu Styles */
+.burger-menu {
+    background: none;
+    border: none;
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 24px;
+    width: 30px;
+    z-index: 1000;
+}
+
+.burger-line {
+    width: 100%;
+    height: 3px;
+    background-color: #FFFFFF;
+    border-radius: 2px;
+}
+
+/* Media Queries */
+@media (min-width: 600px) {
+    .hero-content h1 {
+        font-size: 36px; /* Adjusted for tablets */
+    }
+
+    .hero-content p {
+        font-size: 20px; /* Adjusted for tablets */
+    }
+
+    .card-header {
+        font-size: 18px; /* Adjusted for tablets */
+    }
+
+    .card-content {
+        font-size: 16px; /* Adjusted for tablets */
+    }
+}
+
+@media (min-width: 768px) {
+    .container {
+        max-width: 750px;
+        margin: 0 auto;
+    }
+
+    .hero {
+        padding: 100px 20px; /* Adjusted for larger tablets */
+    }
+
+    .hero-content h1 {
+        font-size: 40px; /* Adjusted for larger tablets */
+    }
+
+    .hero-content p {
+        font-size: 22px; /* Adjusted for larger tablets */
+    }
+}
+
+@media (min-width: 1024px) {
+    .container {
+        max-width: 1000px;
+    }
+
+    .hero {
+        padding: 100px 20px; /* Adjusted for desktops */
+    }
+
+    .hero-content h1 {
+        font-size: 48px; /* Adjusted for desktops */
+    }
+
+    .hero-content p {
+        font-size: 24px; /* Adjusted for desktops */
+    }
+
+    .card {
+        padding: 20px; /* Adjusted for desktops */
+    }
+
+    .card-header {
+        font-size: 20px; /* Adjusted for desktops */
+    }
+
+    .card-content {
+        font-size: 18px; /* Adjusted for desktops */
+    }
+
+    .callout {
+        padding: 20px; /* Adjusted for desktops */
+    }
+}
+
+@media (min-width: 1200px) {
+    .container {
+        max-width: 1200px;
+    }
+
+    .hero {
+        padding: 120px 20px; /* Adjusted for large desktops */
+    }
+
+    .hero-content h1 {
+        font-size: 56px; /* Adjusted for large desktops */
+    }
+
+    .hero-content p {
+        font-size: 26px; /* Adjusted for large desktops */
+    }
+}
+
+@media (min-width: 768px) {
+    .burger-menu {
+        display: none; /* Hide burger menu on larger screens */
+    }
+
+    .navbar-links {
+        display: flex; /* Show links as a row on larger screens */
+        flex-direction: row;
+        align-items: center;
+    }
+
+    .navbar-links a {
+        padding: 0 15px;
+        font-size: 18px;
+    }
+}

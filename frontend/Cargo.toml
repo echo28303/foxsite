@@ -1,0 +1,23 @@
+[package]
+name = "frontend"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
+yew = { version = "0.21.0", features = ["csr"] }
+yew-router = "0.18.0"
+wasm-bindgen = "0.2.92"
+graphql_client = "0.14.0"
+serde = { version = "1.0.204", features = ["derive"] }
+serde_json = "1.0.122"
+serde_derive = "1.0.204"
+console_error_panic_hook = "0.1"
+web-sys = { version = "0.3.70", features = ["CanvasRenderingContext2d", "HtmlCanvasElement", "Document", "Window"] }
+rand = "0.8.5"
+rc = "0.1.1"
+
+[dev-dependencies]
+wasm-bindgen-test = "0.3.42"
+
+[lib]
+crate-type = ["cdylib"]
