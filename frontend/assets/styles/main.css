@@ -74,15 +74,21 @@ a:hover {
 }
 
 .header {
-    font-size: 1.5rem;
+    font-size: 1.4rem;
     width: 100%;
     margin-left: auto;
     margin-right: auto;
+    height: 5rem;
 }
 
 
 nav.navbar div.navbar-brand  {
     width: 40%;
+    margin-left: 0;
+}
+
+.navbar-brand a {
+    font-size: 1.1rem;
 }
 
 
@@ -97,9 +103,6 @@ nav.navbar div.navbar-brand  {
 .navbar {
     background-color: #003366;
     color: #FFFFFF;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
 }
 
 #navbar-links  ul {
@@ -121,8 +124,13 @@ nav.navbar div.navbar-brand  {
 }
 
 #open {
-    width: 60%;
+    width: 25%;
     font-size: 0.9rem;
+   
+    margin-right: auto;
+    margin-top: 3.78rem;
+    z-index: 100;
+
 
 }
 
@@ -134,7 +142,31 @@ nav.navbar div.navbar-brand  {
     flex-direction: column;
     justify-content: space-between;
     margin-left: 0;
+    border-color: #003366;
+    border: 0.5px;
 
+   
+    margin-right: 0.12rem;
+    margin-left: 0.12rem;
+
+
+}
+
+#open  ul li {
+    margin-top: 0.07rem;
+    margin-bottom: 0.17rem;
+    margin-left: 0.12rem;
+    margin-right: 0.12rem;
+    padding-left: 0.17rem;
+    padding-right: 0.17rem;
+    text-align: left;
+    border-top: 0.08px;
+    border-style: dotted;
+    border-color: rgb(204, 201, 201);
+}
+
+#open  ul li:first-child {
+    border: none;
 }
 
 #navbar-links a {
