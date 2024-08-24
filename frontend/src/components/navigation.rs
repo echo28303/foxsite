@@ -1,11 +1,11 @@
+use crate::router::AppRoute;
 use yew::prelude::*;
 use yew_router::prelude::*;
-use crate::router::AppRoute;
 
 #[function_component(Navigation)]
 pub fn navigation() -> Html {
     let is_menu_open = use_state(|| false);
-    
+
     let toggle_menu = {
         let is_menu_open = is_menu_open.clone();
         Callback::from(move |_| is_menu_open.set(!*is_menu_open))

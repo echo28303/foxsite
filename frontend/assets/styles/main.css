@@ -1,36 +1,65 @@
 /* Base Styles - Mobile First */
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video, input, button, tr, td, table, br {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 150%;
+  font: inherit;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+
+
+
+*, *::after, *::before {
+    box-sizing: border-box;
+}
+
 body {
     font-family: 'Roboto', sans-serif;
     background-color: #FFFFFF;
     color: #333333;
-    margin: 0;
-    padding: 0;
-    line-height: 1.6;
+    line-height: 1.5rem;
+    line-height: 1;
 }
 
 /* Typography */
 h1, h2, h3 {
     color: #003366;
     font-weight: 700;
-    margin-top: 0;
 }
 
 h1 {
-    font-size: 28px; /* Adjusted for mobile */
+    font-size: 1.5rem; /* Adjusted for mobile */
 }
 
 h2 {
-    font-size: 24px; /* Adjusted for mobile */
+    font-size: 1.3rem; /* Adjusted for mobile */
 }
 
 h3 {
-    font-size: 20px; /* Adjusted for mobile */
+    font-size: 1.1rem; /* Adjusted for mobile */
 }
 
 p {
     font-family: 'Open Sans', sans-serif;
-    font-size: 14px; /* Adjusted for mobile */
-    margin-bottom: 16px;
+    font-size: 1.1rem; /* Adjusted for mobile */
+    margin-bottom: 1.3rem;
 }
 
 /* Links */
@@ -44,6 +73,145 @@ a:hover {
     color: #00509E;
 }
 
+.header {
+    font-size: 1.4rem;
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    height: 5rem;
+}
+
+
+nav.navbar div.navbar-brand  {
+    width: 40%;
+    margin-left: 0;
+}
+
+.navbar-brand a {
+    font-size: 1.1rem;
+}
+
+
+#navbar-links {
+    width: 60%;
+    font-size: 0.9rem;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* Base Styles for Navigation */
+.navbar {
+    background-color: #003366;
+    color: #FFFFFF;
+}
+
+#navbar-links  ul {
+    list-style: none;
+    background-color: #003366;
+    color: #FFFFFF;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    margin-left: auto;
+    margin-right: auto;
+
+}
+
+
+#navbar-links {
+    display: none; /* Hide links by default */
+}
+
+#open {
+    width: 25%;
+    font-size: 0.9rem;
+   
+    margin-right: auto;
+    margin-top: 3.78rem;
+    z-index: 100;
+
+
+}
+
+#open  ul {
+    list-style: none;
+    background-color: #003366;
+    color: #FFFFFF;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin-left: 0;
+    border-color: #003366;
+    border: 0.5px;
+
+   
+    margin-right: 0.12rem;
+    margin-left: 0.12rem;
+
+
+}
+
+#open  ul li {
+    margin-top: 0.07rem;
+    margin-bottom: 0.17rem;
+    margin-left: 0.12rem;
+    margin-right: 0.12rem;
+    padding-left: 0.17rem;
+    padding-right: 0.17rem;
+    text-align: left;
+    border-top: 0.08px;
+    border-style: dotted;
+    border-color: rgb(204, 201, 201);
+}
+
+#open  ul li:first-child {
+    border: none;
+}
+
+#navbar-links a {
+    color: #FFFFFF;
+    text-decoration: none;
+    padding: 10px 0;
+    width: 100%;
+    text-align: left;
+
+}
+
+#open a {
+    color: #FFFFFF;
+    text-decoration: none;
+    padding-top: 1px;
+    margin: 0.2rem;
+    display: inline-block;
+
+}
+
+/* Burger Menu Styles */
+.burger-menu {
+    background: none;
+    border: none;
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 24px;
+    width: 45px;
+    z-index: 1000;
+    margin-top: 0.4rem;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 0.1rem;
+    
+}
+
+.burger-line {
+    width: 100%;
+    height: 3px;
+    background-color: #FFFFFF;
+    border-radius: 2px;
+}
+
 /* Buttons */
 .btn-primary {
     background-color: #003366;
@@ -53,7 +221,7 @@ a:hover {
     border: none;
     cursor: pointer;
     transition: background-color 0.3s ease;
-    font-size: 14px; /* Adjusted for mobile */
+    font-size: 1.1rem; /* Adjusted for mobile */
 }
 
 .btn-primary:hover {
@@ -121,63 +289,6 @@ a:hover {
     border-radius: 4px;
 }
 
-/* Base Styles for Navigation */
-.navbar {
-    background-color: #003366;
-    color: #FFFFFF;
-    padding: 10px 20px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-
-.navbar-brand a {
-    color: #FFFFFF;
-    font-weight: 700;
-    font-size: 18px;
-    text-decoration: none;
-}
-
-.navbar-links {
-    display: none; /* Hide links by default */
-    flex-direction: column;
-    align-items: flex-start;
-    width: 100%;
-    padding-top: 20px;
-}
-
-.navbar-links.open {
-    display: flex; /* Show links when menu is open */
-}
-
-.navbar-links a {
-    color: #FFFFFF;
-    text-decoration: none;
-    padding: 10px 0;
-    width: 100%;
-    text-align: left;
-    font-size: 16px;
-}
-
-/* Burger Menu Styles */
-.burger-menu {
-    background: none;
-    border: none;
-    cursor: pointer;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    height: 24px;
-    width: 30px;
-    z-index: 1000;
-}
-
-.burger-line {
-    width: 100%;
-    height: 3px;
-    background-color: #FFFFFF;
-    border-radius: 2px;
-}
 
 /* Media Queries */
 @media (min-width: 600px) {
@@ -274,14 +385,14 @@ a:hover {
         display: none; /* Hide burger menu on larger screens */
     }
 
-    .navbar-links {
-        display: flex; /* Show links as a row on larger screens */
-        flex-direction: row;
-        align-items: center;
+    #navbar-links {
+        display: block; /* Show links as a row on larger screens */
+
     }
 
-    .navbar-links a {
+    #navbar-links a {
         padding: 0 15px;
-        font-size: 18px;
+        margin-right: auto;
+        margin-left: auto;
     }
 }
