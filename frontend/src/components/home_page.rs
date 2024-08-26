@@ -51,7 +51,7 @@ pub fn home_page() -> Html {
         </section>
 
         <section class="callout">
-            <p>{ "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse imperdiet urna nec nisi malesuada." }</p>
+            <p>{ "Feature Placeholder." }</p>
         </section>
         </>
     }
