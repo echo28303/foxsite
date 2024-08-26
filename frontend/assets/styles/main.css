@@ -78,14 +78,15 @@ a:hover {
     width: 100%;
     margin-left: auto;
     margin-right: auto;
-    height: 5rem;
+    background-color: #003366;
+    height: 3.5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 
-nav.navbar div.navbar-brand  {
-    width: 40%;
-    margin-left: 0;
-}
+
 
 .navbar-brand a {
     font-size: 1.1rem;
@@ -100,9 +101,13 @@ nav.navbar div.navbar-brand  {
 }
 
 /* Base Styles for Navigation */
-.navbar {
-    background-color: #003366;
+nav.navbar {
+    width: 90%;
     color: #FFFFFF;
+    display: flex;
+    margin-right: auto;
+    margin-left: auto;
+    align-items: center;
 }
 
 #navbar-links  ul {
@@ -123,18 +128,17 @@ nav.navbar div.navbar-brand  {
     display: none; /* Hide links by default */
 }
 
-#open {
-    width: 25%;
+div#open {
+    
     font-size: 0.9rem;
    
     margin-right: auto;
-    margin-top: 3.78rem;
-    z-index: 100;
-
+    width: 25%;
+    
 
 }
 
-#open  ul {
+div#open  ul {
     list-style: none;
     background-color: #003366;
     color: #FFFFFF;
@@ -143,12 +147,7 @@ nav.navbar div.navbar-brand  {
     justify-content: space-between;
     margin-left: 0;
     border-color: #003366;
-    border: 0.5px;
-
-   
-    margin-right: 0.12rem;
-    margin-left: 0.12rem;
-
+    border: 0.5px;    
 
 }
 
@@ -395,4 +394,27 @@ nav.navbar div.navbar-brand  {
         margin-right: auto;
         margin-left: auto;
     }
+}
+
+@media (max-width: 767px) {
+    nav.navbar div.navbar-brand {
+        display: flex;
+        justify-content: space-between ; /* Hide burger menu on larger screens */
+        padding-left: 1rem;
+        padding-right: 1rem;
+        column-gap: 6rem;
+        justify-items: center;
+        align-items: center;
+        margin-left: auto;
+        margin-right: auto;
+        width: 100%;
+    }
+
+    nav.navbar {
+        width: 100%;
+
+    }
+
+
+
 }
