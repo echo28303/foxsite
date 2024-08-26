@@ -74,7 +74,6 @@ a:hover {
 }
 
 .header {
-    font-size: 1.4rem;
     width: 100%;
     margin-left: auto;
     margin-right: auto;
@@ -88,29 +87,29 @@ a:hover {
 
 
 
-.navbar-brand a {
+.navbar-brand > a {
     font-size: 1.1rem;
 }
 
 
-#navbar-links {
+.navbar-links {
     width: 60%;
     font-size: 0.9rem;
     margin-left: auto;
     margin-right: auto;
+    display: none;
 }
 
 /* Base Styles for Navigation */
-nav.navbar {
-    width: 90%;
+nav {
+    width: 100%;
     color: #FFFFFF;
     display: flex;
-    margin-right: auto;
-    margin-left: auto;
-    align-items: center;
+    flex-direction: column;
+    height: 2.5rem;
 }
 
-#navbar-links  ul {
+.navbar-links  ul {
     list-style: none;
     background-color: #003366;
     color: #FFFFFF;
@@ -124,34 +123,30 @@ nav.navbar {
 }
 
 
-#navbar-links {
-    display: none; /* Hide links by default */
-}
-
-div#open {
-    
-    font-size: 0.9rem;
-   
-    margin-right: auto;
-    width: 25%;
-    
+.open {       
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 0.19rem;
 
 }
 
-div#open  ul {
+
+
+.open  ul {
     list-style: none;
     background-color: #003366;
     color: #FFFFFF;
+    border: 0.5px;    
+    z-index: 1000;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    margin-left: 0;
-    border-color: #003366;
+    justify-items:flex-end;
     border: 0.5px;    
-
 }
 
-#open  ul li {
+.open  ul  >  li {
     margin-top: 0.07rem;
     margin-bottom: 0.17rem;
     margin-left: 0.12rem;
@@ -159,16 +154,17 @@ div#open  ul {
     padding-left: 0.17rem;
     padding-right: 0.17rem;
     text-align: left;
+    font-size: 0.9rem;
     border-top: 0.08px;
     border-style: dotted;
     border-color: rgb(204, 201, 201);
 }
 
-#open  ul li:first-child {
+.open  ul li:first-child {
     border: none;
 }
 
-#navbar-links a {
+.navbar-links a {
     color: #FFFFFF;
     text-decoration: none;
     padding: 10px 0;
@@ -177,12 +173,11 @@ div#open  ul {
 
 }
 
-#open a {
+.open a {
     color: #FFFFFF;
     text-decoration: none;
     padding-top: 1px;
     margin: 0.2rem;
-    display: inline-block;
 
 }
 
@@ -195,14 +190,9 @@ div#open  ul {
     flex-direction: column;
     justify-content: space-between;
     height: 24px;
-    width: 45px;
-    z-index: 1000;
-    margin-top: 0.4rem;
-    margin-left: auto;
-    margin-right: auto;
-    margin-bottom: 0.1rem;
-    
+    width: 45px; 
 }
+
 
 .burger-line {
     width: 100%;
@@ -384,36 +374,42 @@ div#open  ul {
         display: none; /* Hide burger menu on larger screens */
     }
 
-    #navbar-links {
+    .navbar-links {
         display: block; /* Show links as a row on larger screens */
 
     }
 
-    #navbar-links a {
+    .navbar-links a {
         padding: 0 15px;
         margin-right: auto;
         margin-left: auto;
     }
+
+    nav {
+        width: 90%;
+        color: #FFFFFF;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: row;
+        height: 2.5rem;
+    }
 }
 
 @media (max-width: 767px) {
-    nav.navbar div.navbar-brand {
+    nav .navbar-brand {
         display: flex;
-        justify-content: space-between ; /* Hide burger menu on larger screens */
-        padding-left: 1rem;
-        padding-right: 1rem;
-        column-gap: 6rem;
-        justify-items: center;
+        justify-content:space-between;
         align-items: center;
         margin-left: auto;
         margin-right: auto;
-        width: 100%;
-    }
-
-    nav.navbar {
-        width: 100%;
+        width: 90%;
 
     }
+
+
+
+
 
 
 

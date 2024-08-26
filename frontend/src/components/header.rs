@@ -22,7 +22,8 @@ pub fn header() -> Html {
                     <span class="burger-line"></span>
                 </button>
             </div>
-            <div id={if *is_menu_open { "open" } else { "navbar-links" }}>
+
+            <div class={if *is_menu_open { "open" } else { "navbar-links" }}>
                 <ul>
                     <li><Link<AppRoute> to={AppRoute::Home}>{ "Home" }</Link<AppRoute>></li>
                     <li><Link<AppRoute> to={AppRoute::About}>{ "About" }</Link<AppRoute>></li>
