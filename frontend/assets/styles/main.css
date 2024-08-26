@@ -33,6 +33,17 @@ p {
     margin-bottom: 16px;
 }
 
+div  ul {
+    list-style: none;
+    background-color: #003366;
+    color: #FFFFFF;
+    padding: 10px 20px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+
+
+}
 /* Links */
 a {
     color: #003366;
@@ -171,6 +182,7 @@ a:hover {
     width: 30px;
     z-index: 1000;
 }
+
 
 .burger-line {
     width: 100%;
